@@ -1,5 +1,5 @@
 import { Field, ID, ObjectType } from "@nestjs/graphql";
-import { StudentType } from "src/student/student.type";
+import { StudentType } from "src/student/graph-type/student.type";
 
 
 @ObjectType('Lesson')

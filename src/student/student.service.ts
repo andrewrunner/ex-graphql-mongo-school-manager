@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { CreateStudentInput } from './create-student.input';
-import { Student } from './student.entity';
+import { CreateStudentInput } from './graph-input/create-student.input';
+import { Student } from './entity/student.entity';
 import { v4 as uuid } from 'uuid'; 
 
 @Injectable()

@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Lesson } from './lesson.entity';
+import { Lesson } from './entity/lesson.entity';
 import { v4 as uuid } from 'uuid'; 
-import { CreateLessonInput } from './lesson.input';
+import { CreateLessonInput } from './graph-input/lesson.input';
 
 @Injectable()
 export class LessonService {
@@ -47,5 +47,4 @@ export class LessonService {
 
         return this.lessonRepostiroy.save(lesson);
     }
-
 }
