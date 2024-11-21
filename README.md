@@ -3,9 +3,8 @@ Simple backend api for school mamanger app;
 
 ### Use
 - [NestJS](https://nestjs.com/)
-- MongoDB 
-- TypeORM
-- GraphQL
+- MongoDB + TypeORM
+- GraphQL (graphql-tools, apollo)
 - jest
 - class-validator - DTO class fields validation
 
@@ -23,6 +22,9 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+
+# Open schema development mode
+# http://localhost:3000/graphql 
 
 # production mode
 $ npm run start:prod

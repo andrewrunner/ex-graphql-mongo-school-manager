@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Lesson } from './entity/lesson.entity';
 import { v4 as uuid } from 'uuid'; 
-import { CreateLessonInput } from './graph-input/lesson.input';
+import { CreateLessonInput } from './graphql/lesson.input';
 
 @Injectable()
 export class LessonService {

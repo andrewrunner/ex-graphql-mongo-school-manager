@@ -5,11 +5,11 @@ import { IsUUID } from "class-validator";
 export class AssignStudentsToLessonInput {
 
     @IsUUID( "4", { each: true }) // 4я версия, для всех (если массив)
-    @Field(type => ID)
+    @Field(() => ID)
     lessonId:string;
 
     @IsUUID()
-    @Field(type => [ID])
+    @Field(() => [ID])
     studentIds: string[];
 
 }
