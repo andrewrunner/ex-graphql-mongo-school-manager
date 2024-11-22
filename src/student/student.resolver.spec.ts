@@ -62,7 +62,7 @@ describe("Student.resolver test", () => {
     createdStudent = response.body.data.createStudent;
   });
 
-/*
+
   it('get student by id', async () => {
 
     const response = await request(app.getHttpServer())
@@ -100,7 +100,7 @@ describe("Student.resolver test", () => {
     expect(response.body.data.students).toBeInstanceOf(Array);
     expect(response.body.data.students).not.toHaveLength(0);   
   });
-*/
+
 
 
   it('removeStudent', async () => { 
@@ -119,41 +119,7 @@ describe("Student.resolver test", () => {
     expect(response.body.data.removeStudent).toEqual(true);
 
   });
-
-
-
-
-
-
-
-
-//   it('get students', async () => {
-
-//     const response = await request(app.getHttpServer())
-//       .post('/graphql')
-//      // .set("Accept", "application/json")
-//       .send({
-//         query: `{
-//             students {
-//                 firstName
-//             }
-//         }`
-//       });
    
-//     expect(response.status).toEqual(200);
-//    // expect(response.headers["Content-Type"]).toMatch(/json/);
-//     expect(response.body).toBeInstanceOf(Object);
-
-//     console.log(response.body)
-
-//     //expect(response.body.data.students).toEqual(3);
-//     //   .set("Accept", "application/json")
-//     //   .expect("Content-Type", /json/)
-//     //   .expect(200);
-
-       
-//   });
-
 
   afterAll(() => {
     if (app) {
