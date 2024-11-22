@@ -7,7 +7,7 @@ import { Student } from '../student/entity/student.entity';
 export const getTypeORMConfig = ():TypeOrmModuleAsyncOptions => ({
     useFactory: (configService: ConfigService) => ({
         type: 'mongodb',
-        host: 'localhost', // 'online-school-db',
+        host: 'online-school-db',
         port: 27017,
         database: 'school',
         connectTimeoutMS:60000,

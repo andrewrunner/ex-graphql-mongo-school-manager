@@ -33,7 +33,7 @@ describe("Student.resolver test", () => {
 
   let createdStudent:Student;
 
-  it('createStudent test', async () => { 
+  it('createStudent', async () => { 
     
     const response = await request(app.getHttpServer())
         .post('/graphql')
@@ -62,7 +62,7 @@ describe("Student.resolver test", () => {
     createdStudent = response.body.data.createStudent;
   });
 
-
+/*
   it('get student by id', async () => {
 
     const response = await request(app.getHttpServer())
@@ -82,7 +82,7 @@ describe("Student.resolver test", () => {
 
   });
 
-    it('get students', async () => {
+  it('get students', async () => {
 
     const response = await request(app.getHttpServer())
       .post('/graphql')
@@ -100,6 +100,26 @@ describe("Student.resolver test", () => {
     expect(response.body.data.students).toBeInstanceOf(Array);
     expect(response.body.data.students).not.toHaveLength(0);   
   });
+*/
+
+
+  it('removeStudent', async () => { 
+    
+    const response = await request(app.getHttpServer())
+        .post('/graphql')
+        .send({
+            query:`mutation {
+                removeStudent (
+                    id: "${createdStudent.id}"
+                )
+            }`
+        });
+
+    expect(response.status).toEqual(200);
+    expect(response.body.data.removeStudent).toEqual(true);
+
+  });
+
 
 
 

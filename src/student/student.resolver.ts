@@ -25,4 +25,9 @@ export class StudentResolver {
     createStudent(@Args('createStudentInput') createStudentInput: CreateStudentInput) {
         return this.studentService.createStudent(createStudentInput);
     }
+
+    @Mutation(() => Boolean)
+    removeStudent(@Args('id') id:string) {
+        return this.studentService.removeStudent(id);
+    }
 }
